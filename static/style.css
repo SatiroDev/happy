@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-inicial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    gap: 20px;
+    background: linear-gradient(to right, #ffdde7, #f8f1f4);
+}
+
+.container-inicial::before {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: #dda73c;
+}
+
+.container-inicial::after {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: #dda73c;
+}
+
+.msg-inicial {
+    color: #e5ad3c;
+    letter-spacing: 3px;
+}
+
+.nome {
+    color: #3d2930;
+    font-size: 80px;
+}
+
+.idade {
+    color: #8c737b;
+    font-size: 22px;
+}
+
+.msg-aniversario {
+    color: #de7094;
+    font-size: 22px;
+
+}
+
+.container-inicial a {
+    text-decoration: none;
+    padding: 15px 25px;
+    background-color: #db7094;
+    border-radius: 22px;
+    color: white;
+}
