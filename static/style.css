@@ -48,6 +48,7 @@ main {
     font-size: 80px;font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-style:italic;
+    text-align: center;
 }
 
 .idade {
@@ -88,16 +89,15 @@ main {
 }
 
 .msgs {
-    display: flex;
     gap: 5px;
     font-size: 40px;
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-style:italic;
+    text-align: center;
 }
 
 .msg-motivos {
-    text-align: right;
     color: #3d2930;
 }
 
