@@ -25,7 +25,7 @@
                 {% for card in cards %}
                 <div class="card">
                     <div class="frente">
-                        <img src="../static/img/heart-svgrepo-com (2).svg" alt="coração">
+                        <img src="{{ url_for('static', filename='img/coracao.svg') }}" alt="coração">
                         <p class="num">{{ card.id }}</p>
                         <p class="toque-abrir">
                             Toque para abrir
