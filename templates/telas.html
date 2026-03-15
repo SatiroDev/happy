@@ -12,7 +12,7 @@
             <p class="msg-inicial">
                 DE CORAÇÃO
             </p>
-            <div>
+            <div class="msgs">
                 <p class="msg-motivos">
                     17 Motivos Pelos Quais
                 </p>
@@ -22,7 +22,78 @@
 
             </div>
             <div class="cards">
-                
+                {% for card in cards %}
+                <div class="card">
+                    <div class="frente">
+                        <img src="../static/img/heart-svgrepo-com (2).svg" alt="coração">
+                        <p class="num">{{ card.id }}</p>
+                        <p class="toque-abrir">
+                            Toque para abrir
+                        </p>
+                    </div>
+                    <div class="verso">
+                        <p class="frase">
+                            {{ card.frase }}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="container-historia">
+             <p class="msg-inicial">
+                CADA MOMENTO IMPORTA
+            </p>
+            <div class="msgs">
+                <p class="msg-motivos">
+                    Nossa
+                </p>
+                <p class="msg-euteamo">
+                    História
+                </p>
+
+            </div>
+            <div class="tempo">
+                <div class="comeco">
+                    <p class="titulo">
+                        O COMEÇO
+                    </p>
+                    <p class="desc">
+                        O dia em que nossos caminhos se cruzaram e tudo mudou para sempre.
+                    </p>
+                </div>
+                <div class="comeco">
+                    <p class="titulo">
+                        PRIMEIRA CONVERSA
+                    </p>
+                    <p class="desc">
+                        A primeira conversa foi bem estranha 'bora amigar?' ksksks.
+                    </p>
+                </div>
+                <div class="primeiro-encontro">
+                    <p class="titulo">
+                        PRIMEIRO ENCONTRO
+                    </p>
+                    <p class="desc">
+                        Não lembro se teve encontro 😅.
+                    </p>
+                </div>
+                <div class="pedido">
+                    <p class="titulo">
+                        O PEDIDO
+                    </p>
+                    <p class="desc">
+                        Por incrível que pareça não teve pedido 👍🏻.
+                    </p>
+                </div>
+                <div class="hoje">
+                    <p class="titulo">
+                        HOJE
+                    </p>
+                    <p class="desc">
+                        Cada dia ao seu lado é o meu dia favorito. E hoje, mais do que nunca, celebro você.
+                    </p>
+                </div>
             </div>
         </div>
     </main>

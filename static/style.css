@@ -7,6 +7,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .container-inicial {
@@ -37,16 +38,24 @@ main {
 .msg-inicial {
     color: #e5ad3c;
     letter-spacing: 3px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .nome {
     color: #3d2930;
-    font-size: 80px;
+    font-size: 80px;font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style:italic;
 }
 
 .idade {
     color: #8c737b;
     font-size: 22px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .msg-aniversario {
@@ -61,4 +70,265 @@ main {
     background-color: #db7094;
     border-radius: 22px;
     color: white;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.container-motivos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    gap: 20px;
+    background-color: #f7eff2;
+    padding: 50px 0px;
+}
+
+.msgs {
+    display: flex;
+    gap: 5px;
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style:italic;
+}
+
+.msg-motivos {
+    text-align: right;
+    color: #3d2930;
+}
+
+.msg-euteamo {
+    color: #db7094;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.card {
+    padding: 5px 5px;
+    width: 20%;
+    height: 100px;
+    border-radius: 10px;
+    transition: transform 0.8s;
+    background-color: white;
+    min-width: 100px;   
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frente, .verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
+
+.frente {
+    gap: 10px;
+    border: 1px solid #e7dade;
+}
+
+.verso {
+    transform: rotateY(180deg);
+    text-align: center;
+    background-color: #f5e3ea;
+    color: #3d2930;
+    border: 1px solid #edc1d0;
+}
+
+@media (max-width:950px) {
+    .card {
+        width: 220px;
+    }
+}
+
+.card img {
+    width: 20px;
+}
+
+.card:hover {
+    transform: rotateY(180deg)
+}
+
+.card .num {
+    color: #887e80;
+    font-weight: 900;
+}
+
+.card .toque-abrir {
+    color: #8c737b;
+    font-size: 12px;
+}
+
+.container-historia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 50px 0px;
+}
+
+.tempo {
+    display: flex;
+    flex-direction: column;
+    max-width: 790px;
+    width: 100%;
+    gap: 77px;
+}
+
+.tempo div:nth-child(odd){
+  align-self: flex-start;
+  text-align: right;
+}
+
+.tempo div:nth-child(even){
+  align-self: flex-end;
+  
+}
+
+.tempo div::before{
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #db7094;
+  border-radius: 50%;
+}
+
+/* linha */
+.tempo div::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: #e7dade;
+
+}
+
+/* posição quando estiver na esquerda */
+.tempo div:nth-child(odd)::before{
+    top: 0px;
+    right: -48px;
+}
+
+.tempo div:nth-child(odd)::after{
+    top: 15px;
+    right: -43px;
+}
+
+/* posição quando estiver na direita */
+.tempo div:nth-child(even)::before{
+    top: 0px;
+    left: -54px;
+}
+
+.tempo div:nth-child(even)::after{
+    top: 15px;
+    left: -49px;
+}
+
+.tempo div {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5px;
+    position: relative;
+}
+
+.tempo .titulo {
+    color: #e5ad3c;
+    letter-spacing: 3px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 14px;
+}
+
+@media (max-width:850px) {
+    .tempo {
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+    }
+
+    .tempo div:nth-child(odd){
+        align-self: center;
+        text-align: left;
+        width: 70%;
+        left: 20px;
+    }
+
+    .tempo div:nth-child(even){
+        align-self: center;
+        width: 70%;
+        left: 20px;
+    }
+    
+    .tempo div::before{
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: #db7094;
+        border-radius: 50%;
+    }
+
+    /* linha */
+    .tempo div::after{
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 100px;
+        background: #e7dade;
+
+    }
+
+    /* posição quando estiver na esquerda */
+    .tempo div:nth-child(odd)::before{
+        top: 0px;
+        left: -55px;
+        
+    }
+
+    .tempo div:nth-child(odd)::after{
+        top: 15px;
+        left: -50px;
+    }
+
+    /* posição quando estiver na direita */
+    .tempo div:nth-child(even)::before{
+        top: 0px;
+        /* left:-10px; */
+    }
+
+    .tempo div:nth-child(even)::after{
+        top: 15px;
+        /* left:-10px; */
+    }
 }
