@@ -2,6 +2,20 @@ from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
+lista_fotos = [
+    'img/foto.jpeg',
+    'img/foto1.jpeg',
+    'img/foto2.jpeg',
+    'img/foto3.jpeg',
+    'img/foto4.jpeg',
+    'img/foto5.jpeg',
+    'img/foto6.jpeg',
+    'img/foto7.jpeg',
+    'img/foto8.jpeg',
+    'img/foto9.jpeg'
+
+]
+
 lista_motivos = [
     {
         "id": 1,
@@ -80,7 +94,7 @@ def index():
 
 @app.route("/cards")
 def cards():
-    return render_template("telas.html",  cards=lista_motivos)
+    return render_template("telas.html",  cards=lista_motivos, fotos=lista_fotos)
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -96,6 +96,35 @@
                 </div>
             </div>
         </div>
+
+         <div class="container-galeria">
+             <p class="msg-inicial">
+                CADA MOMENTO IMPORTA
+            </p>
+            <div class="msgs">
+                <p class="msg-motivos">
+                    Nossa
+                </p>
+                <p class="msg-euteamo">
+                    Galeria
+                </p>
+
+            </div>
+            <div class="galeria">
+                {% for foto in fotos %}
+                <div>
+                    <img src="{{ url_for('static', filename=foto) }}" alt="foto" class="foto"
+        onclick="abrirImagem(this.src)" >
+                </div>
+
+                {% endfor %}
+                <div id="modal">
+                    <span onclick="fecharImagem()">✖</span>
+                    <img id="img-grande">
+                </div>
+            </div>
+        </div>
     </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

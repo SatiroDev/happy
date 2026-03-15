@@ -89,6 +89,7 @@ main {
 }
 
 .msgs {
+    display: flex;
     gap: 5px;
     font-size: 40px;
     font-family: "Playfair Display", serif;
@@ -271,6 +272,10 @@ main {
 }
 
 @media (max-width:850px) {
+    .msgs {
+        display:inline ;
+    }
+
     .tempo {
         display: flex;
         justify-content: center;
@@ -331,4 +336,67 @@ main {
         top: 15px;
         /* left:-10px; */
     }
+}
+
+
+.container-galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    gap: 20px;
+    background-color: #f9f2f4;
+    padding: 50px 0px;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    width: 300px;
+    position: absolute;
+}
+
+.galeria div {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border:10px solid white;
+    border-bottom:40px solid white;
+}
+
+#modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+}
+
+#modal img{
+    width: 30%;
+    border:10px solid white;
+    border-bottom: 40px solid white;
+}
+
+#modal span{
+    position:absolute;
+    top:20px;
+    right:40px;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
 }
